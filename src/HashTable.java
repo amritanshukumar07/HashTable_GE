@@ -55,4 +55,18 @@ public class HashTable<K,V> {
      }
     }
 
+    // Method to remove a key valur pair
+
+    public void remove(K key){
+     int index= getBucketIndex(key);
+     LinkedList<MyMapNode<K,V>> bucket = buckets[index];
+
+     for(int i=0;i< bucket.size();i++){
+         if (bucket.get(i).key.equals(key)){
+             bucket.remove(i);
+             return;
+         }
+     }
+    }
+
 }

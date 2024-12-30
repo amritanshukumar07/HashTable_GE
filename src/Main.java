@@ -20,7 +20,13 @@ public class Main {
             }
         }
 
-        System.out.println("Word Frequencies");
+        // Remove the word "avoidable"
+        System.out.println("Before removal of 'avoidable':");
+        map.display();
+
+        map.remove("avoidable");
+
+        System.out.println("\nAfter removal of 'avoidable':");
         map.display();
 
 
